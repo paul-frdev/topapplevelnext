@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from 'next';
+import type { GetStaticProps } from 'next';
 import { useState } from 'react';
 import { Button, Htag, Ptag, Rating, Tag } from '../components';
 import { WithLayout } from '../layout/Layout';
