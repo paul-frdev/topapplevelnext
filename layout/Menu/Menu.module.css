@@ -50,8 +50,13 @@
     border-left: 1px solid #dfdfdf;
 }
 
+.secondLevelBlock {
+    display: none;
+}
+
 .secondLevelBlockOpened:last-child {
     margin-bottom: 20px;
+    display: block;
 }
 
 .thirdLevel {
