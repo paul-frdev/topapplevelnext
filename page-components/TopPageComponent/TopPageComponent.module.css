@@ -1,0 +1,26 @@
+.wrapper {
+    margin-top: 40px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 35px;
+}
+
+.title,
+.hhTitle {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    justify-items: left;
+    gap: 20px;
+}
+
+.hhTitle {
+    grid-template-columns: auto 1fr;
+    align-items: baseline;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+}

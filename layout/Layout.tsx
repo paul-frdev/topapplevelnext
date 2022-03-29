@@ -6,7 +6,6 @@ import { Footer } from './Footer/Footer';
 import { AppContextProvider, IAppContext } from '../context/app.context';
 
 import styles from './Layout.module.css';
-import cn from 'classnames';
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
     return (

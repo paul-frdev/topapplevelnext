@@ -18,6 +18,7 @@
 }
 .body {
     grid-area: body;
+    padding: 0 15px;
 }
 .footer {
     grid-area: footer;

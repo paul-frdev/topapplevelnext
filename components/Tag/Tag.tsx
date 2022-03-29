@@ -12,6 +12,7 @@ export const Tag = ({ size = 'sm', color = 'ghost', href, children, className, .
             [styles.red]: color === 'red',
             [styles.green]: color === 'green',
             [styles.primary]: color === 'primary',
+            [styles.grey]: color === 'grey'
         })}
             {...props}
         >{
