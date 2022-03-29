@@ -8,7 +8,7 @@ import cn from 'classnames';
 export const Footer = ({ ...props }: FooterProps): JSX.Element => {
     return (
         <div {...props} >
-            <div className={styles.footer}>
+            <div className={styles.footerContainer}>
                 <p className={styles.footerRights}>OwlTop © <span>{new Date().getFullYear()}</span> Все права защищены</p>
                 <div className={styles.footerPolicy}>
                     <a href="#" className={styles.footerLink}>Пользовательское соглашение</a>

@@ -1,4 +1,4 @@
-.footer {
+.footerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +39,7 @@
 }
 
 @media (max-width: 870px) {
-    .footer {
+    .footerContainer {
         justify-content: center;
         flex-wrap: wrap;
         padding-bottom: 10px;
