@@ -10,16 +10,14 @@ import cn from 'classnames';
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
     return (
-        <>
-            <Header />
-            <div>
-                <SideBar />
-                <div>
-                    {children}
-                </div>
+        <div className={styles.wrapper}>
+            <Header className={styles.header} />
+            <SideBar className={styles.sidebar} />
+            <div className={styles.body}>
+                {children}
             </div>
-            <Footer />
-        </>
+            <Footer className={styles.footer} />
+        </div>
     );
 };
 
