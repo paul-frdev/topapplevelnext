@@ -1,0 +1,33 @@
+.sortIcon {
+    display: none;
+}
+
+.active {
+    color: var(--color-primary);
+}
+
+.active .sortIcon {
+    display: block;
+    margin-right: 8px;
+}
+.sort {
+    display: inline-block;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 40px;
+}
+
+.sort span {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 8px;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+.sort span:not(.active) {
+    grid-template-columns: 1fr;
+}

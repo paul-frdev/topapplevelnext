@@ -2,10 +2,10 @@ import React from 'react';
 import { SearchProps } from './Search.props';
 import SearchIcon from './search.svg';
 
-import styles from './Header.module.css';
+import styles from './Search.module.css';
 import cn from 'classnames';
 
-export const Header = ({ onsubmit, className, ...props }: SearchProps): JSX.Element => {
+export const Search = ({ onsubmit, className, ...props }: SearchProps): JSX.Element => {
     return (
         <form {...props}>
             <div className={styles.wrapper}>
