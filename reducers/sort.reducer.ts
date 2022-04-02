@@ -1,4 +1,3 @@
-import { stat } from "fs";
 import { SortEnum } from "../components/Sort/Sort.props";
 import { ProductModel } from "../interfaces/product.interface";
 
