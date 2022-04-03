@@ -1,6 +1,6 @@
 .button {
     display: inline-block;
-
+    position: relative;
     box-sizing: border-box;
     padding: 10px;
 
@@ -9,6 +9,13 @@
     border: none;
     border-radius: 5px;
     font-size: 14px;
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-71%, 68%);
 }
 
 .primary {
@@ -26,6 +33,7 @@
     border: 1px solid var(--color-gray-light);
     transition: background-color, color 0.3s ease-out;
     background: none;
+    padding-right: 18px;
 }
 
 .ghost:hover {

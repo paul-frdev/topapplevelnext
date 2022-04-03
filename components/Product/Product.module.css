@@ -127,6 +127,31 @@
     font-size: 16px;
     line-height: 22px;
 }
+
+.characteristics {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding-right: 60px;
+}
+
+.characteristicName {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.characteristicDots {
+    border-bottom: 1px dashed var(--bg-gray-light);
+}
+
+.characteristicValue {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+}
+
 @media screen and (max-width: 1300px) {
     .title {
         font-size: 18px;
