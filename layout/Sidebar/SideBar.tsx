@@ -8,9 +8,11 @@ import Link from 'next/link';
 export const SideBar = ({ ...props }: SideBarProps): JSX.Element => {
     return (
         <div {...props}>
-            <Link href={'/'}>
-                <LogoIcon />
-            </Link>
+            <span style={{cursor: 'pointer'}}>
+                <Link href={'/'}>
+                    <LogoIcon />
+                </Link>
+            </span>
             <Search />
             <Menu />
         </div>

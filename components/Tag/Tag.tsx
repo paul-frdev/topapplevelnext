@@ -8,6 +8,7 @@ export const Tag = ({ size = 'sm', color = 'ghost', href, children, className, .
         <div className={cn(styles.tag, className, {
             [styles.sm]: size === 'sm',
             [styles.md]: size === 'md',
+            [styles.tiny]: size === 'tiny',
             [styles.ghost]: color === 'ghost',
             [styles.red]: color === 'red',
             [styles.green]: color === 'green',

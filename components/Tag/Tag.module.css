@@ -7,6 +7,12 @@
     border-radius: 20px;
 }
 
+.tiny {
+    padding: 3px 5px;
+    font-size: 10px;
+    line-height: 10px;
+}
+
 .sm {
     padding: 5px 10px;
     font-size: 12px;
