@@ -9,6 +9,7 @@ import { Divider } from '../Divider/Divider';
 import Image from 'next/image';
 
 import styles from './Product.module.css';
+import cn from 'classnames';
 
 
 export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
@@ -67,7 +68,7 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
           {product.disadvantages}
         </div>}
       </div>
-      <Divider className={styles.hr} />
+      <Divider className={cn(styles.hr, styles.hr2)} />
       <div className={styles.actions}>
         <Button appearance='primary'>Узнать подробнее</Button>
         <Button className={styles.reviewBtn} appearance='ghost' arrow={'right'}>Узнать подробнее</Button>
