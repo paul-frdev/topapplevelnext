@@ -11,13 +11,6 @@
     font-size: 14px;
 }
 
-.arrow {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-71%, 68%);
-}
-
 .primary {
     color: var(--color-light);
     background-color: var(--bg-primary);
@@ -38,5 +31,17 @@
 
 .ghost:hover {
     color: var(--color-light);
+    fill: var(--color-light);
     background-color: #5931ef;
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-71%, 68%);
+}
+
+.arrow svg:hover {
+    fill: currentColor;
 }

@@ -274,3 +274,22 @@
             'actions';
     }
 } 
+
+@media screen and (max-width: 480px) {
+      .actions {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+      }
+
+      .actions > button {
+          width: 150px;
+          height: 36px;
+      }
+
+      .reviewBtn {
+          margin-left: 0;
+          margin-top: 15px;
+      }
+}
