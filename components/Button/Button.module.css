@@ -37,11 +37,14 @@
 
 .arrow {
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-71%, 68%);
+    top: 11px;
+    right: 7px;
+}
+.ghost:hover svg {
+	fill: var(--color-light);
 }
 
-.arrow svg:hover {
-    fill: currentColor;
+.down {
+    transition: transform .2s ease-out;
+    transform: rotate(90deg);
 }
