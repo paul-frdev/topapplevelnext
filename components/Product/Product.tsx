@@ -96,7 +96,7 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
             <Divider />
           </>
         ))}
-        {/* <ReviewForm productId={product._id}/> */}
+        <ReviewForm productId={product._id}/>
       </Card>
     </>
   );

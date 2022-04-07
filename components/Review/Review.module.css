@@ -4,7 +4,6 @@
     align-items: flex-start;
     gap: 10px;
     font-size: 14px;
-    line-height: 24px;
 }
 
 .description {
@@ -12,10 +11,12 @@
 }
 
 .date {
+    line-height: 24px;
     margin-bottom: 10px;
 }
 
 .name {
+    line-height: 24px;
     font-weight: 700;
 }
 

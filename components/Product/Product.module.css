@@ -153,8 +153,8 @@
 }
 
 .closed {
-    /* overflow: hidden; */
-    display: none;
+    overflow: hidden;
+    /* display: none; */
     max-width: 0;
     padding: 0;
 }
