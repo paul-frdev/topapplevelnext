@@ -14,7 +14,7 @@ import { IReviewForm } from '../../interfaces/ReviewForm.interface';
 export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps): JSX.Element => {
 
 
-  const { register, control, handleSubmit } = useForm<IReviewForm>();
+  const { register, control, handleSubmit, formState: { errors } } = useForm<IReviewForm>();
 
   const onSubmit = (data: IReviewForm) => {
     console.log(data);
@@ -26,12 +26,15 @@ export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):
         {...props}
       >
         <Input
-          {...register('name')}
-          placeholder='Имя' />
+          {...register('name', { required: { value: true, message: 'Заполните имя' } })}
+          placeholder='Имя'
+          error={errors.name}
+        />
         <Input
-          {...register('title')}
+          {...register('title', { required: { value: true, message: 'Заполните заголовок' } })}
           className={styles.input}
           placeholder='Заголовок отзыва'
+          error={errors.title}
         />
         <div className={styles.rating}>
           <span>Оценка:</span>
@@ -48,8 +51,9 @@ export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):
           />
         </div>
         <TextArea
-          {...register('description')}
+          {...register('description', { required: { value: true, message: 'Заполните описание' } })}
           className={styles.description}
+          error={errors.description}
           placeholder='Текст отзыва'
         />
         <div className={styles.submit}>

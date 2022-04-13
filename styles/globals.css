@@ -25,6 +25,7 @@ a {
 	--bg-primary: #7653fc;
 	--color-primary: #7653fc;
 	--bg-red: #fc836d;
+	--color-red: #fc836d;
 	--bg-green: #1dc37e;
 	--color-green: #1dc37e;
 	--bg-greenlight: #c8f8e4;
@@ -32,6 +33,6 @@ a {
 
 	--color-gray-light: #ebebeb;
 	--bg-gray-light: #ebebeb;
-	--color-gray-dark: #787D85;
-	--color-gray: #A4A4A4;
+	--color-gray-dark: #787d85;
+	--color-gray: #a4a4a4;
 }
