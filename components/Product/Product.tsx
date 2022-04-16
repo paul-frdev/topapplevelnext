@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { ProductProps } from './Product.props';
 import { Card } from '../Card/Card';
 import { Rating } from '../Rating/Rating';
@@ -17,8 +17,18 @@ import { ReviewForm } from '../ReviewForm/ReviewForm';
 export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
 
   const [isReviewOpened, setInReviewOpened] = useState(false);
+  const reviwRef = useRef<HTMLDivElement>(null);
+
+  const scrollToReview = () => {
+    setInReviewOpened(true);
+    reviwRef.current?.scrollIntoView({
+       behavior: 'smooth',
+       block: 'start'
+    });
+  };
+
   return (
-    <>
+    <div className={className} {...props}>
       <Card color={'white'} className={styles.product}>
         <div className={styles.logo}>
           <Image
@@ -50,7 +60,9 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
         </div>
         <div className={styles.priceTitle}>цена</div>
         <div className={styles.creditTitle}>кредит</div>
-        <div className={styles.reviewTitle}>{product.reviewCount} {declOfNum(product.reviewCount, ['отзыв', 'отзыва', 'отзывов'])}</div>
+        <div className={styles.reviewTitle}>
+          <a href='#ref' onClick={scrollToReview}>{product.reviewCount} {declOfNum(product.reviewCount, ['отзыв', 'отзыва', 'отзывов'])}</a>
+        </div>
 
         <Divider className={styles.hr} />
         <div className={styles.description}>{product.description}</div>
@@ -89,15 +101,15 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
       <Card color='blue' className={cn(styles.reviews, {
         [styles.opened]: isReviewOpened,
         [styles.closed]: !isReviewOpened
-      })}>
+      })} ref={reviwRef}>
         {product.reviews.map(review => (
           <div key={review._id}>
             <Review review={review} />
             <Divider />
           </div>
         ))}
-        <ReviewForm productId={product._id}/>
+        <ReviewForm productId={product._id} />
       </Card>
-    </>
+    </div>
   );
 };
